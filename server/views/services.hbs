@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{{> headers}}
+
+</head>	
+
+<body>
+	{{> menuAndOther}}
+	
+	<div class="main" id="mainP">
+		<div class = "infPanel">
+			Послуги <span class="_block"></span>
+		</div>
+		 
+		 <!-- <button type="submit" class="buttons" onclick="sortBy('DSK')">Посортувати за ціною спаданням</button>
+ 		<button type="submit" class="buttons" onclick="sortBy('ASK')">Посортувати за ціною зростанням</button> -->
+ 		<form>
+		  <select id="sortBy" name="sortBy">
+		    <option value="DSK">Посортувати за ціною спаданням</option>
+		    <option value="ASK">Посортувати за ціною зростанням</option>
+		  </select>
+		</form>
+
+		<div id="servicesBlock" data-count="4">
+
+			{{getServices services}}
+
+		</div>	
+				<br/>
+			<div  id = "arrow" onclick="uploadMore()">
+				<img src="http://localhost/images/arrow.png"/>
+				<!-- <span>Завантажити ще</span> -->
+			</div>
+	</div>
+	
+	{{>footer}}
+
+</body>
+</html>

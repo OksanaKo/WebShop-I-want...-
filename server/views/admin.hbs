@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{{> headers}}
+
+</head>	
+
+<body>
+	{{> menuAndOther}}
+	
+	<div class="main" id="mainP">
+		<div class = "infPanel">
+			Адмін панель - {{title}}
+			 <span class="_block"></span>
+		</div>
+		
+		<div class="adminAdd">
+		{{#if addService}}
+		<form class="forms" action="addService" method="post" enctype="multipart/form-data">
+		  
+		  	<div>
+			    <label for="input-serviceName" >Назва: </label>		    
+			    <input name="serviceName" type="text" class="form-control" id="input-serviceName" placeholder="serviceName" required>
+		   	</div>
+		   	<br/>
+		   	<div>	  
+			    <label for="input-servicePrice">Ціна: </label> 
+			    <input name="servicePrice" type="text" class="form-control" id="input-servicePrice" placeholder="servicePrice" required> 
+			</div>   	
+			<br/>
+			<div>
+			   	<label for="input-serviceShortDescription">Короткий опис: </label> 
+			    <textarea name="serviceShortDescription" class="form-control"id="input-serviceShortDescription" placeholder="serviceShortDescription"></textarea>  
+		   	</div>
+		   	<br/>
+		   	
+		   	<div>
+			   	<label for="input-fileImage">Завантажити фото: </label> 
+			   	<input type="file" name="fileImage" accept="image/*" required>
+		   	</div>
+		   	<br/>
+		   	<div class="formButton">
+		     <button type="submit" class="buttons">Додати послугу</button>
+		    </div>
+			 <span class="_block"></span>
+		</form>
+		{{/if}}
+
+		{{#if addNews}}
+		<form class="forms" action="adminNews" method="post" enctype="multipart/form-data">
+		  
+		  	<div>
+			    <label for="input-newstitle" >Заголовок: </label>		    
+			    <input name="newsTitle" type="text" class="form-control" id="input-newstitle" placeholder="newstitle" required>
+		   	</div>
+			<br/>
+			<div>
+			   	<label for="input-newsText">Текст: </label> 
+			    <textarea name="newsText" class="form-control" id="input-newsText" placeholder="newsText"></textarea>  
+		   	</div>
+		   	<br/>
+		   	
+		   	<div>
+			   	<label for="input-newsImage">Завантажити фото: </label> 
+			   	<input type="file" name="fileImage" accept="image/*" required>
+		   	</div>
+		   	<br/>
+		   	<div class="formButton">
+		     <button type="submit" class="buttons">Додати новину</button>
+		    </div>
+			
+		</form>
+
+
+		{{getNewsTitle news}}
+		{{/if}}
+		</div>
+
+	</div>
+	
+
+	{{>footer}}
+
+</body>
+</html>

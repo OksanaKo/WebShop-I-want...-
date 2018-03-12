@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{{> headers}}
+
+</head>	
+
+<body>
+	{{> menuAndOther}}
+	
+	<div class="main" id="mainP">
+		<div class = "infPanel">
+			Реєстрація 
+			<span class="_block"></span>
+		</div>
+		<form id="register-form" class="forms" name="register-form">
+			
+		  	<div>
+			    <label for="input-username" >Логін:</label>		    
+			    <input name="username" type="text" class="form-control" id="input-username" placeholder="username" required>
+			</div>
+		   	<br/>
+		   	<div>	  
+			    <label for="input-password">Пароль:</label> 
+			    <input name="password" type="password" class="form-control" id="input-password" placeholder=" password" required> 
+			</div>
+			<br/>
+			<div>	  
+			    <label for="input-password-check">Ще раз:</label> 
+			    <input name="repeatPassword" type="password" class="form-control" id="input-password-check" placeholder="repeat password" required> 
+			</div>
+		   	<br/><br/>
+		   	<div>
+			   	<label for="input-name">Імя:</label> 
+			    <input name="name" type="text" class="form-control" id="input-name" placeholder="your name"> 
+			</div>
+		   	<br/>
+		   	<div>
+			   	<label for="input-email">Email:</label> 
+			    <input name="email" type="email" class="form-control" id="input-email" placeholder="email"> 
+		   	</div>
+		   	<br/>
+		   	<div class="formButton">
+		     <button type="submit" class="buttons">Зареєструватись</button>
+		    </div>
+			 
+			
+			 
+		</form>
+
+	</div>
+	
+	{{>footer}}
+
+</body>
+</html>

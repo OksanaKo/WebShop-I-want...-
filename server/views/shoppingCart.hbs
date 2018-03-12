@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{{> headers}}
+
+</head>	
+
+<body>
+	{{> menuAndOther}}
+	
+	<div class="main" id="mainP">
+		<div class = "infPanel">
+			Ваша корзина
+			<span class="_block"></span>
+		</div>
+		
+		<div id="shoppingCart">
+			
+			{{getOrder order}}
+		</div>
+	</div>
+	
+	{{>footer}}
+
+</body>
+</html>

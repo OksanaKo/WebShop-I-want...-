@@ -1,0 +1,24 @@
+{
+  "name": "shop",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.0",
+    "connect-mongostore": "^0.1.4",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "ejs-locals": "^1.0.2",
+    "express": "*",
+    "express-session": "^1.15.6",
+    "formidable": "^1.1.1",
+    "hbs": "^4.0.1",
+    "mongoose": "^4.10.8",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "winston": "^2.4.0"
+  }
+}
